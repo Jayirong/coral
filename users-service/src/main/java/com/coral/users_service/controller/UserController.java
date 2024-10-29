@@ -70,6 +70,7 @@ public class UserController {
     }
     
     //obtener un usuario por username (pa lo del auth)
+    @GetMapping("/username/{username}")
     public ResponseEntity<?> getUserByUsername(@PathVariable String username) {
         Optional<User> user = userService.findByUsername(username);
         if (user.isPresent()) {

@@ -23,7 +23,7 @@ public class UsersServiceApplication {
 			userRepository.deleteAll();
 
 			System.out.println("iniciando la creacion del usuario admin...");
-			User admin = new User(null, "adminqueso", passwordEncoder.encode("admin123"), "admin@admin.admin", "ROLE_ADMIN");
+			User admin = new User(null, "adminqueso", passwordEncoder.encode("admin123"), "admin@admin.admin", "ADMIN");
 			userRepository.save(admin);
 			System.out.println("Usuario admin creado");
 		};
